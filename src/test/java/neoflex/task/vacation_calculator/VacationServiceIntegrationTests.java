@@ -25,9 +25,9 @@ public class VacationServiceIntegrationTests {
         double averageSalary = 29_300, result;
 
         result = service.calculate(averageSalary, 8, LocalDate.of(2025, 01, 01));
-        assertEquals(0, result, 0.1);
+        assertEquals(0, result, 0.001);
 
         result = service.calculate(averageSalary, 1, LocalDate.of(2025, 02, 23));
-        assertEquals(0, result, 0.1);
+        assertEquals(0, result, 0.001);
     }
 }
