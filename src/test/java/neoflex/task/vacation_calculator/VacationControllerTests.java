@@ -62,7 +62,7 @@ public class VacationControllerTests {
                 .param("averageSalary", "30000")
                 .param("vacationDays", "0"))
                 .andExpect(status().isBadRequest())
-                .andExpect(jsonPath("$.errors").value("vacationDays should be above 0"));
+                .andExpect(jsonPath("$.errors").value("vacationDays should be above 0."));
     }
 
     @Test
@@ -71,6 +71,6 @@ public class VacationControllerTests {
                 .param("averageSalary", "-10")
                 .param("vacationDays", "10"))
                 .andExpect(status().isBadRequest())
-                .andExpect(jsonPath("$.errors").value("averageSalary should be above 0"));
+                .andExpect(jsonPath("$.errors").value("averageSalary should be above 0."));
     }
 }
