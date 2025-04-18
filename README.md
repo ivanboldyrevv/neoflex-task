@@ -16,7 +16,7 @@ To run the app, follow these steps:
 
 Clone the repository:
 ```bash
-git clone <repository-url>
+git clone <repository-url>.git
 ```
 
 Navigate to the project directory:
