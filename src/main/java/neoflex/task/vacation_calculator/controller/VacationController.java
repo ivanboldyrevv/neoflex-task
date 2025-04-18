@@ -43,11 +43,13 @@ public class VacationController {
 
             @Parameter(description="Positive duration in days.", example="10")
             @RequestParam
-            @Positive(message="vacationDays should be above 0.") int vacationDays,
+            @Positive(message="vacationDays should be above 0.")
+            int vacationDays,
 
             @Parameter(description="Start vacation date in ISO format.", example="2025-04-18")
             @RequestParam(required = false)
-            @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate startVacation
+            @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
+            LocalDate startVacation
     ) {
         double vacationSalary = (startVacation != null)
         ? service.calculate(averageSalary, vacationDays, startVacation)
