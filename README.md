@@ -39,7 +39,7 @@ The application comes with built-in OpenAPI documentation.
 
 Once the app is running, you can access the API documentation by visiting:
 - Swagger UI - a user-friendly interface to explore and test the API endpoints.
-    1. goto `http://localhost:8080/swagger_ui/index.html`
+    1. goto `http://localhost:8080/swagger-ui/index.html`
 - OpenAPI Spec - raw OpenAPI specification for the API.
     1. goto `http://localhost:8080/v3/api-docs`
 
