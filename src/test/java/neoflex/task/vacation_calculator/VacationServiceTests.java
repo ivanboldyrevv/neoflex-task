@@ -31,29 +31,29 @@ public class VacationServiceTests {
 
     @Test
     void calculateSalary_noWeekendsAndHolidays_returnsExpectedSalary() {
-        double result = service.calculate(29300, 10);
-        assertEquals(10_000, result, 0.001);
+        double result = service.calculate(12_345.67, 10);
+        assertEquals(4_213.54, result, 0.001);
     }
 
     @Test
     void calculateSalary_withWeekends_returnsExpectedSalary() {
         LocalDate startDate = LocalDate.of(2025, 04, 14);
-        double result = service.calculate(29300, 7, startDate);
-        assertEquals(5_000, result, 0.001);
+        double result = service.calculate(12_345.67, 7, startDate);
+        assertEquals(2_106.77, result, 0.001);
     }
 
     @Test
     void calculateSalary_withHoliday_returnsExpectedSalary() {
         LocalDate startDate = LocalDate.of(2025, 4, 21);
-        double result = service.calculate(29_300, 5, startDate);
-        assertEquals(4_000, result, 0.01);
+        double result = service.calculate(12_345.67, 5, startDate);
+        assertEquals(1_685.42, result, 0.001);
     }
 
     @Test
     void calculateSalary_withHoliday_withWeekens_returnsExpectedSalary() {        
         LocalDate startDate = LocalDate.of(2025, 4, 21);
-        double result = service.calculate(29_300, 7, startDate);
-        assertEquals(4_000, result, 0.1);
+        double result = service.calculate(12_345.67, 7, startDate);
+        assertEquals(1_685.42, result, 0.001);
     }
     
 }
